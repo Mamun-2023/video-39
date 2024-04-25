@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Concept</title>
+    <style>
+      .boxes {
+        border: 2px solid rgb(45, 45, 216);
+        display: grid;
+        grid-template-areas:
+          "nav nav nav"
+          "article article side"
+          "content"
+          "empty half some"
+          "footer footer";
+      }
+      .box {
+        border: 2px solid;
+        height: 50px;
+        margin: 10px;
+      }
+      #item-1 {
+        grid-area: nav;
+        background-color: rgb(198, 116, 9);
+      }
+      .two {
+        grid-area: article ;
+        background-color: blueviolet;
+      }
+      .three {
+        grid-area: nav;
+        background-color: rgb(42, 6, 6);
+      }
+      .four{
+        grid-area:some ;
+        background-color: rgb(50, 197, 197);
+      }
+      .five{
+        grid-area:article;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <box class="box" id="item-1">1</box>
+      <box class="box two">2</box>
+      <box class="box three">3</box>
+      <box class="box four">4</box>
+      <box class="box five">5</box>
+    </div>
+  </body>
+</html>

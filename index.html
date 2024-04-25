@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>CSS Grid</title>
-</head>
-<body>
-    
-</body>
+
+    <style>
+      .container{
+        border: 2px solid rgb(6, 52, 67);
+        display: grid;
+        grid-template-columns: [first] 100px [second] 150px;
+        grid-template-rows: 100px 150px 200px;
+      }
+      .box{
+        height: 50px ;
+        width: 50px;
+        border: 2px solid rgb(186, 15, 149);}
+
+        .item{
+            grid-row:1/2;
+            grid-column:1/2 ;
+        }
+.item-2{
+    grid-row: 2/3;
+    grid-column:2/3;
+}
+.item-5{
+    grid-column-start:2 ;
+    grid-column-end:3 ;
+    grid-row-end: 3;
+    grid-row-start: 2;
+    /* same as this short hand */
+    /* grid-row: 2/3;
+    grid-column:2/3 ; */
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">box-1</div>
+      <div class="box">box-2</div>
+      <div class="box">box-3</div>
+      <div class="box item">grid-row.column</div>
+      <div class="box">box-5</div>
+      <div class="box item-5">overlap</div>
+      <div class="box">box-7</div>
+      <div class="box item-2">grid row.column</div>
+    </div>
+  </body>
 </html>
