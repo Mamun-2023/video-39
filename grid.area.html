@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-Template-Area</title>
+    <style>
+      .boxes {
+        display: grid;
+        grid-template-areas:
+          "nav nav nav"
+          "article article side"
+          "aside main main "
+          "middle middle empty"
+          "footer footer footer";
+      }
+      .box {
+        border: 2px solid rgb(139, 139, 36);
+        height: 50px;
+        text-align: center;
+        padding: 20px;
+      }
+      #item-1 {
+        grid-area: nav;
+        background-color: rgb(130, 130, 157);
+      }
+      #item-2 {
+        grid-area: article;
+        background-color: rgb(114, 137, 137);
+      }
+
+      #item-3 {
+        grid-area: side;
+        background-color: rgb(117, 77, 77);
+      }
+      #item-4 {
+        grid-area: aside;
+        background-color: rgb(49, 78, 21);
+      }
+      #item-5 {
+        grid-area: main;
+        background-color: rgb(107, 83, 167);
+      }
+      #item-6 {
+        grid-area: middle;
+        background-color: rgb(180, 180, 114);
+      }
+      #item-7 {
+        grid-area: empty;
+        background-color: rgb(122, 159, 165);
+      }
+      #item-8 {
+        grid-area: footer;
+        background-color: rgb(145, 85, 143);
+      }
+    </style>
+  </head>
+  <body>
+    <center>Grid Grid-Template-Area Style</center>
+    <div class="boxes">
+      <box class="box" id="item-1">nav nav nav" </box>
+      <box class="box" id="item-2">"article article</box>
+      <box class="box" id="item-3"> side"</box>
+      <box class="box" id="item-4">"aside</box>
+      <box class="box" id="item-5"> main main "</box>
+      <box class="box" id="item-6"> "middle middle </box>
+      <box class="box" id="item-7"> empty"</box>
+
+      <box class="box" id="item-8"> "footer footer footer</box>
+    </div>
+  </body>
+</html>
